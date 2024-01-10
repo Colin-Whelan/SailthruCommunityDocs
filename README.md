@@ -1,3 +1,5 @@
+
+
 # Welcome to the Sailthru Community Docs
 
 Welcome to Sailthru Community Docs – your resource for optimizing email automation and overcoming common challenges in Sailthru. Whether you're a seasoned email developer or just starting out, this is designed to enhance your knowledge, share best practices, and foster collaboration.
@@ -12,23 +14,20 @@ Got some cool ideas or fixes up your sleeve? We'd love for you to toss them into
     
 3.  **Join the Banter in the Discussions Tab:** Have questions, tips, or just want to chat with fellow Sailthru buffs? Jump into the Discussions tab. It's all about sharing, learning, and connecting.
 
-# Bugs
+# Bugs/Quirks
 ## Hosted Pages (Visual Editor) 
 Middle clicking/right click + open in new tab, does not work for pages made with the visual editor. The link on these hosted visual pages is missing a part of the link.  
 
 URLs look like this: href="/hosted_page_composer/{id}"  
-
 when it should be: href="/content/hosted_page_composer/{id}"
 
 **Solution:** No native solution
-
 **Workaround:** [See this comment for custom script fix](https://sailthru.zendesk.com/hc/en-us/community/posts/18554081415444/comments/19881700113684) 
 
 ## HTML Editor
 On Firefox only, scrolling jumps way to many lines (~150 lines)
 
 **Solution:** [Feature Request for solution:](https://sailthru.zendesk.com/hc/en-us/community/posts/19528756057748-Improve-HTML-Builder) 
-
 **Workaround:** [See this comment for custom script fix](https://sailthru.zendesk.com/hc/en-us/community/posts/19528756057748/comments/19529068525588) 
 
 ## Lifecycle Optimizer (LOs)
@@ -39,7 +38,6 @@ Once a user is marked as 'hardbounce' there is no natural/automatic way to remov
 
 ### 'Ghosts' in LOs
 After removing 'Wait' actions, users from that step will still wait their original wait period before moving on/exiting.
-
 During this wait period they are invisible in the UI and API. 
 
 **Solution:** The only solution is to set the LO to 'inactive' which fully removes everyone from the LO, then switch back to 'active'. 
@@ -50,18 +48,6 @@ Occasionally the selection will get 'stuck'. Selecting other templates *appears*
 
 **Solution:** Reload the page and select again.
 
-### Incorrect Ordering
-Templates are not sorted in typical alphabetical order. Instead they use this: 01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
-
-Templates starting with lowercase letters are ordered last.
-
-**No solution**
-
-### No 'time filter' support
-While there isn't an easy way to input time, it IS supported. 
-
-**Solution:** [See this feature request for more info](https://sailthru.zendesk.com/hc/en-us/community/posts/19300998622612-Improved-Triggered-Send-Log) 
-
 # Code Samples
 
 ## API Requests
@@ -71,7 +57,6 @@ Used either with the API clients, or [with the web UI](https://my.sailthru.com/a
 Sends API events to initiate LOs and triggers.
 
 Uses: POST - event
-
 vars are optional and can be completely omitted if not used.
 ``` handlebars
 {
@@ -96,7 +81,7 @@ Uses: GET- user
 ```
 
 ### Merge Profiles by Email Address
-Other keys can be used, but email is simplest and easiest based on info from support.
+Other keys can be used, but email is simplest and easiest to use.
 
 This works whether the old email or the new one has the extid. In either case the '**new_email_address**' will be the email of the account, the extid will be assigned, and the other profile is deleted. If the old profile was a hardbounce, it will remain to prevent future sends.
 
@@ -143,9 +128,7 @@ Success response:
 ## Dates
 ### Show date in bilingual format (EN + FR) 
 Required variables:
-
 `input_date` = your date(supported formats: All main formats. If using '/' must be MM/DD/YY. Use YYYY if <2000
-
 `language` = the current language as a 2-letter string
 
 ``` handlebars
@@ -169,3 +152,18 @@ Formatted date: {displayFormattedDate(language)}
 ```
 Gives:
 Formatted date: 1er novembre 2023
+
+# Tips
+## Triggered Send Log
+
+### Template Ordering
+Templates starting with lowercase letters are ordered last. With 100s of templates this isn't always immediately obvious.
+
+Uses this sorting:
+01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+
+
+### No 'time filter' support
+While there isn't an easy way to input time, it IS supported. 
+
+[See this feature request for more info](https://sailthru.zendesk.com/hc/en-us/community/posts/19300998622612-Improved-Triggered-Send-Log) 

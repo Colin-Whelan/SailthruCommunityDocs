@@ -1,5 +1,3 @@
-
-
 # Welcome to the Sailthru Community Docs
 
 Welcome to Sailthru Community Docs – your resource for optimizing email automation and overcoming common challenges in Sailthru. Whether you're a seasoned email developer or just starting out, this is designed to enhance your knowledge, share best practices, and foster collaboration.
@@ -41,6 +39,16 @@ After removing 'Wait' actions, users from that step will still wait their origin
 During this wait period they are invisible in the UI and API. 
 
 **Solution:** The only solution is to set the LO to 'inactive' which fully removes everyone from the LO, then switch back to 'active'. 
+
+## Template Previews
+### Some Images not loading with Content Library
+Images referenced with 'http://' won't show in image preview, but 'https://' images will show as expected. This only affects the Preview, the final emails are unaffected.
+
+**Solution:** Use 'https' in all image references, or add where applicable:
+``` handlebars
+{myImageUrl = replace(myImageUrl, "http://", "https://")}
+```
+
 
 ## Triggered Send Log
 ### Stuck Selection

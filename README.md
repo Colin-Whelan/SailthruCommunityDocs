@@ -1,3 +1,5 @@
+
+
 # Welcome to the Sailthru Community Docs
 
 Welcome to Sailthru Community Docs – your resource for optimizing email automation and overcoming common challenges in Sailthru. Whether you're a seasoned email developer or just starting out, this is designed to enhance your knowledge, share best practices, and foster collaboration.
@@ -162,6 +164,12 @@ Gives:
 Formatted date: 1er novembre 2023
 
 # Tips
+
+## Promotion Codes in Campaigns
+
+### Campaigns End When Promotion Codes Are Empty
+If promotion codes run out mid-way through a Campaign, the Campaign will stop at that point and end the Campaign. This is a nice safety feature, but isn't documented anywhere.
+
 ## Triggered Send Log
 
 ### Template Ordering

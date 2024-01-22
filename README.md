@@ -17,6 +17,9 @@ Got some cool ideas or fixes up your sleeve? We'd love for you to toss them into
 
 # Bugs/Quirks
 ## Code
+### assert()
+It's not explicitly documented, but assert() DOES NOT stop LO Flows from running. Further steps will still execute.
+
 ### split()
 [Existing Docs](https://getstarted.sailthru.com/developers/zephyr-functions-library/split/) make no mention of limitations or odd behavior. 
 

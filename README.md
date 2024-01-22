@@ -1,5 +1,6 @@
 
 
+
 # Welcome to the Sailthru Community Docs
 
 Welcome to Sailthru Community Docs – your resource for optimizing email automation and overcoming common challenges in Sailthru. Whether you're a seasoned email developer or just starting out, this is designed to enhance your knowledge, share best practices, and foster collaboration.
@@ -15,19 +16,50 @@ Got some cool ideas or fixes up your sleeve? We'd love for you to toss them into
 3.  **Join the Banter in the Discussions Tab:** Have questions, tips, or just want to chat with fellow Sailthru buffs? Jump into the Discussions tab. It's all about sharing, learning, and connecting.
 
 # Bugs/Quirks
+## Code
+### split()
+[Existing Docs](https://getstarted.sailthru.com/developers/zephyr-functions-library/split/) make no mention of limitations or odd behavior. 
+
+So you may expect this: 
+``` handlebars
+{test = "Some Custom > Text"} 
+{split(test, " > ")}
+``` 
+
+To produce this: 
+``` handlebars
+["Some Custom", "Text"]
+```
+
+But instead you get this: 
+``` handlebars
+[Some, Custom, Text]
+```
+
+The delimiter '*string*' is being treated as an array of single character delimiters, where each character will split the string. This goes against all modern programming languages and makes no sense.
+
+The documentation also shows that the resulting array should have double quotes around each string, yet there are none.
+
+**Solution:** No native solution
+
+**Workaround:**  If possible, use replace() first to remove extra characters, then use split() with a single character only.
+
 ## Hosted Pages (Visual Editor) 
+
 Middle clicking/right click + open in new tab, does not work for pages made with the visual editor. The link on these hosted visual pages is missing a part of the link.  
 
 URLs look like this: href="/hosted_page_composer/{id}"  
 when it should be: href="/content/hosted_page_composer/{id}"
 
 **Solution:** No native solution
+
 **Workaround:** [See this comment for custom script fix](https://sailthru.zendesk.com/hc/en-us/community/posts/18554081415444/comments/19881700113684) 
 
 ## HTML Editor
 On Firefox only, scrolling jumps way to many lines (~150 lines)
 
 **Solution:** [Feature Request for solution:](https://sailthru.zendesk.com/hc/en-us/community/posts/19528756057748-Improve-HTML-Builder) 
+
 **Workaround:** [See this comment for custom script fix](https://sailthru.zendesk.com/hc/en-us/community/posts/19528756057748/comments/19529068525588) 
 
 ## Profiles

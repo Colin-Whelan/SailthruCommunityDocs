@@ -18,7 +18,17 @@ Got some cool ideas or fixes up your sleeve? We'd love for you to toss them into
 # Bugs/Quirks
 ## Code
 ### assert()
-It's not explicitly documented, but assert() DOES NOT stop LO Flows from running. Further steps will still execute.
+It's not [explicitly documented](https://getstarted.sailthru.com/developers/zephyr-functions-library/assert/), but assert() **DOES NOT** stop LO Flows from running. Further steps will still execute.
+
+### round()
+The [documentation](https://getstarted.sailthru.com/developers/zephyr-functions-library/round/) is incorrect - it will not display as a raw whole number, it will display as a number with a single decimal point.
+``` handlebars
+{round(50.5)}  = 51.0
+``` 
+To display as an int like the documentation, use int() as well:
+``` handlebars
+{int(round(50.5))}  = 51
+``` 
 
 ### split()
 [Existing Docs](https://getstarted.sailthru.com/developers/zephyr-functions-library/split/) make no mention of limitations or odd behavior. 
@@ -46,6 +56,13 @@ The documentation also shows that the resulting array should have double quotes 
 **Solution:** No native solution
 
 **Workaround:**  If possible, use replace() first to remove extra characters, then use split() with a single character only.
+``` handlebars
+{test = "Some Custom > Text"} 
+{test = replace(test, " > ", ">")}
+{split(test, ">")}
+= 
+[Some Custom, Text]
+``` 
 
 ## Hosted Pages (Visual Editor) 
 

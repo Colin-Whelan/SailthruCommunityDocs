@@ -29,6 +29,8 @@ Got some cool ideas or fixes up your sleeve? We'd love for you to toss them into
 ### assert()
 It's not [explicitly documented](https://getstarted.sailthru.com/developers/zephyr-functions-library/assert/), but assert() **DOES NOT** stop LO Flows from running. Further steps will still execute.
 
+[See here for adding a custom Event Log with assert()/cancel()](https://github.com/Colin-Whelan/SailthruCommunityDocs/blob/main/README.md#event-log-for-messages-canceled-with-assert--cancel).
+
 ### round()
 The [documentation](https://getstarted.sailthru.com/developers/zephyr-functions-library/round/) is incorrect - it will not display as a raw whole number, it will display as a number with a single decimal point.
 ``` handlebars

@@ -1,6 +1,4 @@
 
-
-
 # Welcome to the Sailthru Community Docs
 
 Welcome to Sailthru Community Docs – your resource for optimizing email automation and overcoming common challenges in Sailthru. Whether you're a seasoned email developer or just starting out, this is designed to enhance your knowledge, share best practices, and foster collaboration.
@@ -14,6 +12,17 @@ Got some cool ideas or fixes up your sleeve? We'd love for you to toss them into
 2.  **Code Wizards, Your Pull Requests Are Welcome:** If you've cracked a bug or brewed up some code magic, we're all ears (and eyes!). Shoot us a pull request to update directly. 
     
 3.  **Join the Banter in the Discussions Tab:** Have questions, tips, or just want to chat with fellow Sailthru buffs? Jump into the Discussions tab. It's all about sharing, learning, and connecting.
+
+# Table of Contents
+- [Bugs/Quirks](https://github.com/Colin-Whelan/SailthruCommunityDocs/tree/main?tab=readme-ov-file#bugsquirks)
+	- [Code](https://github.com/Colin-Whelan/SailthruCommunityDocs/tree/main?tab=readme-ov-file#code)
+	- [Lifecycle Optimizer (LOs)](https://github.com/Colin-Whelan/SailthruCommunityDocs/tree/main?tab=readme-ov-file#lifecycle-optimizer-los)
+	- [Triggered Send Log](https://github.com/Colin-Whelan/SailthruCommunityDocs/tree/main?tab=readme-ov-file#triggered-send-log)
+	- [Hosted Pages (Visual Editor)](https://github.com/Colin-Whelan/SailthruCommunityDocs/tree/main?tab=readme-ov-file#code-samples)
+- [Code Samples](https://github.com/Colin-Whelan/SailthruCommunityDocs/tree/main?tab=readme-ov-file#code-samples)
+	- [API Requests](https://github.com/Colin-Whelan/SailthruCommunityDocs/tree/main?tab=readme-ov-file#api-requests)
+	- [Content Library](https://github.com/Colin-Whelan/SailthruCommunityDocs/tree/main?tab=readme-ov-file#content-library)
+- [Tips](https://github.com/Colin-Whelan/SailthruCommunityDocs/tree/main?tab=readme-ov-file#tips)
 
 # Bugs/Quirks
 ## Code
@@ -175,6 +184,9 @@ Success response:
 {response = personalize({"algorithm": "custom", "custom_keys": [replace(sku, " ", "")], "custom_key_type": "sku","include_vars":true})}
 {skuLookupResponse  = response[0]}
 ```
+**!! WARNING !!**
+There is a hidden property from the UI called 'expire_date' which will prevent some products/articles from being returned unless this property is added: `"allow_expired":true`
+This hidden value shows when the product will expire, but the only way to view the field is after this special parameter is added.
 
 ## Currency
 ### Format Currency
@@ -216,6 +228,30 @@ Formatted date: {displayFormattedDate(language)}
 ```
 Gives:
 Formatted date: 1er novembre 2023
+
+## Event Log for Messages Canceled with assert() + cancel()
+If using assert() + cancel(), it is really beneficial to log the failures. This can be done with the use of [Template Triggers](https://getstarted.sailthru.com/email/trig-transac/create-template-triggers/) - only works with HTML Templates. 
+
+In the HTML template, go to 'Triggers' (the last tab, might have to have this enabled on your space), add a Trigger for the 'cancel' event with a time of 0 minutes and use the 'Custom Zephyr Script' Action with this as the code:
+``` handlebars
+{thisEvent = {"event":"X Template Failure","date":date("E, d MMM yyyy HH:mm:ss Z", time("now")),"cartSkus":cartSkus,"failureMessage":event.failure_message}}
+
+{logLimit = 50}
+{eventLogs = profile.vars.eventLog_Failures}
+
+{*If the existing log is at or past the logLimit(50), trim the oldest entries and add the new event*}
+{if length(eventLogs) >= logLimit }
+{eventLogs = slice(eventLogs, length(eventLogs) - (logLimit - 1))}
+{else if !eventLogs}
+{eventLogs = []}
+{/if}
+
+{push("eventLogs", thisEvent)}
+
+{api_user({"vars": {"eventLog_Failures": eventLogs}})}
+```
+This will capture any failures and log the data to the customers profile. Custom data can be added as needed.  Other templates can use the same code and share the `eventLog_Failures` field.
+
 
 # Tips
 

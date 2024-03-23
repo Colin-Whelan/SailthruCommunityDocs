@@ -12,18 +12,22 @@ Got some cool ideas or fixes up your sleeve? We'd love for you to toss them into
     
 3.  **Join the Banter in the Discussions Tab:** Have questions, tips, or just want to chat with fellow Sailthru buffs? Jump into the Discussions tab. It's all about sharing, learning, and connecting.
 
+## Table of Contents
 
+- [Bugs & Quirks](./Bugs%20&%20Quirks/)
+  - [Code](./Bugs%20&%20Quirks/Code/)
+  - [Email Previews](./Bugs%20&%20Quirks/Email%20Previews/)
+  - [HTML Editor](./Bugs%20&%20Quirks/HTML%20Editor/)
+  - [Lifecycle Optimizer](./Bugs%20&%20Quirks/Lifecycle%20Optimizer/)
+  - [Profiles](./Bugs%20&%20Quirks/Profiles/)
+  - [Promotion Codes](./Bugs%20&%20Quirks/Promotion%20Codes/)
+  - [Triggered Send Log](./Bugs%20&%20Quirks/Triggered%20Send%20Log/)
+- [Code Samples](./Code%20Samples/)
+  - [API Requests](./Code%20Samples/API%20Requests/)
+  - [Content Library](./Code%20Samples/Content%20Library/)
+  - [Currency](./Code%20Samples/Currency/)
+  - [Custom Event Log](./Code%20Samples/Custom%20Event%20Log/)
+  - [Dates](./Code%20Samples/Dates/)
+  - [Tips](./Code%20Samples/Tips/)
+- [Home](./Home.md)
 
-
-- [Bugs/Quirks](./Bugs & Quirks/)
-	- [Code](./code)
-	- [Lifecycle Optimizer (LOs)](./lifecycle-optimizer-los)
-	- [Triggered Send Log](./triggered-send-log)
-	- [Hosted Pages (Visual Editor)](./code-samples)
-- [Code Samples](./code-samples)
-	- [API Requests](./api-requests)
-	- [Content Library](./content-library)
-- [Tips](./Tips/)
-    - [Consent Management](./Tips/Consent%20Management)
-    - [Promotion Codes](./Tips/Promotion%20Codes)
-    - [Triggered Send Log](./Tips/Triggered%20Send%20Log)

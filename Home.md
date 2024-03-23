@@ -13,7 +13,7 @@ Got some cool ideas or fixes up your sleeve? We'd love for you to toss them into
 3.  **Join the Banter in the Discussions Tab:** Have questions, tips, or just want to chat with fellow Sailthru buffs? Jump into the Discussions tab. It's all about sharing, learning, and connecting.
 
 
-
+## Table of Contents
 
 - [Bugs & Quirks](./Bugs%20&%20Quirks/)
   - [Code](./Bugs%20&%20Quirks/Code/)

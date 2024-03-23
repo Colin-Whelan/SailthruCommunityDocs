@@ -7,22 +7,3 @@ Changing the template name often doesn't work because it's using the Public Name
 
 When getting started with this, it's recommended that you change the logic of the optout page to only allow them to unsub from all emails and/or from certain lists, rather than individual templates.
 
-## Table of Contents
-
-- [Bugs & Quirks](./Bugs & Quirks/)
-  - [Code](./Bugs & Quirks/Code/)
-  - [Email Previews](./Bugs & Quirks/Email Previews/)
-  - [HTML Editor](./Bugs & Quirks/HTML Editor/)
-  - [Lifecycle Optimizer](./Bugs & Quirks/Lifecycle Optimizer/)
-  - [Profiles](./Bugs & Quirks/Profiles/)
-  - [Promotion Codes](./Bugs & Quirks/Promotion Codes/)
-  - [Triggered Send Log](./Bugs & Quirks/Triggered Send Log/)
-- [Code Samples](./Code Samples/)
-  - [API Requests](./Code Samples/API Requests/)
-  - [Content Library](./Code Samples/Content Library/)
-  - [Currency](./Code Samples/Currency/)
-  - [Custom Event Log](./Code Samples/Custom Event Log/)
-  - [Dates](./Code Samples/Dates/)
-  - [Tips](./Code Samples/Tips/)
-- [Home](./Home.md)
-

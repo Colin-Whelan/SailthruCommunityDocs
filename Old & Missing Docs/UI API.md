@@ -210,4 +210,34 @@ After authenticating with BEE, the access token is used to access cloudstorage f
 | data.items[i].thumbnail | string | URL of low res version of thumbnail previews (only shows when item is image) |
 | data.items[i].item-count | string | Count of items in the folder.  (only shows when item is folder) |
 
+---
+
+### GET `https://my.sailthru.com/uiapi/promotions/`
+Returns details about the promotions
+
+#### Return data
+Returns a JSON array of items.
+
+| Field                       | Type          | Description                                                               |
+|-----------------------------|---------------|---------------------------------------------------------------------------|
+| items | array | Array of items, one for each promo |
+| items[i].id | int | System ID of the promotion | 
+| items[i].client_id | int | The current space ID (Number in space selection in top right) | 
+| items[i].name | string | Human name of the promotion | 
+| items[i].vars | JSON | JSON object for the optional Promo Fields | 
+| items[i].vars.offer | string | Offer text - available in Zephyr with promotion().vars.offer | 
+| items[i].vars.description | string | Description text - available in Zephyr with promotion().vars.description | 
+| items[i].vars.terms_and_conditions | string | Terms and Conditions text - available in Zephyr with promotion().vars.terms_and_conditions | 
+| items[i].report_email | string | The email address to send reminders to | 
+| items[i].unassigned | int | The number of unused codes | 
+| items[i].create_date | int | Timestamp of the promotion creation date | 
+| items[i].modify_date | int | Timestamp of the last promotion edit | 
+| items[i].create_user | string | Email address of the user who created the promotion |
+| items[i].modify_user | string | Email address of the user to last edit of promotion | 
+| items[i].refill_reminder | int | Number of promotions remaining before sending refill reminder to `report_email` | 
+| items[i].refill_reminder_sent | boolean| Whether 'Refill Reminder' is enabled or not | 
+
+Adding the promotion ID to the request URL  will return the details for just that promotion:
+
+`GET https://my.sailthru.com/uiapi/promotions/{id}`
 

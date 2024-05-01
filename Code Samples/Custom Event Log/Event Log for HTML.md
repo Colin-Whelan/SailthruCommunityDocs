@@ -1,4 +1,4 @@
-# Event Log for Messages Canceled with assert() + cancel()
+# Event Log for Messages Cancelled with assert() + cancel()
 If using assert() + cancel(), it is really beneficial to log the failures. This can be done with the use of [Template Triggers](https://getstarted.sailthru.com/email/trig-transac/create-template-triggers/) - only works with HTML Templates. 
 
 In the HTML template, go to 'Triggers' (the last tab, might have to have this enabled on your space), add a Trigger for the 'cancel' event with a time of 0 minutes and use the 'Custom Zephyr Script' Action with this as the code:

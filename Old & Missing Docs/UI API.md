@@ -1,7 +1,7 @@
 # UI API
 Sailthru's API for the visual aspects of the website.
 
-This API is useful for custom scripting, and aisd in development of future tools. These endpoints are available from anywhere within Sailthru, allowing for sharing of data between parts of the system. This also means that custom addons can also share any information between any parts of the system. 
+This API is useful for custom scripting, and aids in development of future tools. These endpoints are available from anywhere within Sailthru, allowing for sharing of data between parts of the system. This also means that custom addons can also share any information between any parts of the system. 
 
 ## Known Endpoints
 

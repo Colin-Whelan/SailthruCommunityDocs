@@ -1,11 +1,9 @@
 # UI API
 Sailthru's API for the visual aspects of the website.
 
-I use this API a fair bit for userscripts, so I'm documenting my use and it's capabilities to aid in development of future tools. These endpoints are available from anywhere within Sailthru, allowing for sharing of data between parts of the system. This also means that custom addons can also share any information between any parts of the system. 
+This API is useful for custom scripting, and aisd in development of future tools. These endpoints are available from anywhere within Sailthru, allowing for sharing of data between parts of the system. This also means that custom addons can also share any information between any parts of the system. 
 
-Usually this is used for GET requests to retrieve information, but can likely be used to POST as well. No testing has been done here.
-
-## Endpoints
+## Known Endpoints
 
 ### `GET https://my.sailthru.com/uiapi/campaign/{campaignId}`
 

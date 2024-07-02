@@ -3,7 +3,7 @@ If using assert() + cancel(), it is really beneficial to log the failures. This 
 
 In the HTML template, go to 'Triggers' (the last tab, might have to have this enabled on your space), add a Trigger for the 'cancel' event with a time of 0 minutes and use the 'Custom Zephyr Script' Action with this as the code:
 ``` handlebars
-{thisEvent = {"event":"X Template Failure","date":date("E, d MMM yyyy HH:mm:ss Z", time("now")),"cartSkus":cartSkus,"failureMessage":event.failure_message}}
+{thisEvent = {"event":"X Template Failure","date":date("E, d MMM yyyy HH:mm:ss Z", time("now")),"failureMessage":event.failure_message}}
 
 {logLimit = 50}
 {eventLogs = profile.vars.eventLog_Failures}

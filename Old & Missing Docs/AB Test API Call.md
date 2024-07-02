@@ -1,6 +1,6 @@
 
 # AB Test API Call
-This is a backup of the AB Test API Call documentation. The original can has been removed from the official Sailthru documentation.
+This is a backup of the AB Test API Call documentation. The original has been removed from the official Sailthru documentation.
 
 ## AB Testing Campaigns in Sailthru
 

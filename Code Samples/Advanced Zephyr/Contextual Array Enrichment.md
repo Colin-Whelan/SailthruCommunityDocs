@@ -19,7 +19,7 @@ Given this data:
   'title': 'Record-Breaking Heatwave Sweeps Across Europe', 'category': 'Environment', 'readTime': 4}, {
   'title': 'Blockbuster Movie Breaks Box Office Records', 'category': 'Entertainment', 'readTime': 3}, {
   'title': 'Stock Market Soars to All-Time High', 'category': 'Finance', 'readTime': 8
-  } ]}
+} ]}
 ```
 
 Set the base 'myData' variable equal to the existing data. Using this format allows for the next piece to be save to include and used with several pieces of data throughout a template.

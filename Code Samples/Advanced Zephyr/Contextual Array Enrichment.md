@@ -12,7 +12,7 @@ This context includes information about the item's position (first, last), as we
 Given this data:
 
 ```handlebars
-{articles_m = [{
+{articles = [{
   'title': 'Breaking News: Global Summit Announced', 'category': 'Politics', 'readTime': 5}, {
   'title': 'New Study Reveals Benefits of Mediterranean Diet', 'category': 'Health', 'readTime': 7}, {
   'title': 'Tech Giant Unveils Revolutionary Smartphone', 'category': 'Technology', 'readTime': 6}, {

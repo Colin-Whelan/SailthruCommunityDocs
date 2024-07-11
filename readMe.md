@@ -15,19 +15,20 @@ Got some cool ideas or fixes up your sleeve? We'd love for you to toss them into
 
 ## Table of Contents
 
-- [Bugs & Quirks](./Bugs%20&%20Quirks/)
-  - [Code](./Bugs%20&%20Quirks/Code/)
+- [Bugs & Quirks](./Bugs%20&%20Quirks/) 
+  - [Code](./Bugs%20&%20Quirks/Code/) - Odd Zephyr behavior
   - [Email Previews](./Bugs%20&%20Quirks/Email%20Previews/)
-  - [HTML Editor](./Bugs%20&%20Quirks/HTML%20Editor/)
+  - [HTML Editor](./Bugs%20&%20Quirks/HTML%20Editor/) - Firefox bug in HTML editor
   - [Lifecycle Optimizer](./Bugs%20&%20Quirks/Lifecycle%20Optimizer/)
   - [Profiles](./Bugs%20&%20Quirks/Profiles/)
   - [Promotion Codes](./Bugs%20&%20Quirks/Promotion%20Codes/)
   - [Triggered Send Log](./Bugs%20&%20Quirks/Triggered%20Send%20Log/)
-- [Code Samples](./Code%20Samples/)
-  - [API Requests](./Code%20Samples/API%20Requests/)
+- [Code Samples](./Code%20Samples/) - Helpful code samples for common tasks like dealing with dates and currencies 
+  - [Advanced Zephyr](./Code%20Samples/Advanced%20Zephyr/)
+  - [API Requests](./Code%20Samples/API%20Requests/) 
   - [Content Library](./Code%20Samples/Content%20Library/)
-  - [Currency](./Code%20Samples/Currency/)
+  - [Currency](./Code%20Samples/Currency/) 
   - [Custom Event Log](./Code%20Samples/Custom%20Event%20Log/)
   - [Dates](./Code%20Samples/Dates/)
-  - [Tips](./Code%20Samples/Tips/)
-- [Home](./Home.md)
+- [Old & Missing Docs](./Old%20&%20Missing%20Docs/) - Docs that used to be here but have since been removed from the official docs
+- [Tips](./Code%20Samples/Tips/)

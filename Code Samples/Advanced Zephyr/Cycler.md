@@ -29,17 +29,15 @@ test4 -- right
 Given this data
 
 ```handlebars
-{articles = [
-    {'title': 'Breaking News: Global Summit Announced', 'category': 'Politics', 'readTime': 5},
-    {'title': 'New Study Reveals Benefits of Mediterranean Diet', 'category': 'Health', 'readTime': 7},
-    {'title': 'Tech Giant Unveils Revolutionary Smartphone', 'category': 'Technology', 'readTime': 6},
-    {'title': 'Record-Breaking Heatwave Sweeps Across Europe', 'category': 'Environment', 'readTime': 4},
-    {'title': 'Blockbuster Movie Breaks Box Office Records', 'category': 'Entertainment', 'readTime': 3},
-    {'title': 'Stock Market Soars to All-Time High', 'category': 'Finance', 'readTime': 8}
-]}
+{articles = [{
+  'title': 'Breaking News: Global Summit Announced', 'category': 'Politics', 'readTime': 5}, {
+  'title': 'New Study Reveals Benefits of Mediterranean Diet', 'category': 'Health', 'readTime': 7}, {
+  'title': 'Tech Giant Unveils Revolutionary Smartphone', 'category': 'Technology', 'readTime': 6}, {
+  'title': 'Record-Breaking Heatwave Sweeps Across Europe', 'category': 'Environment', 'readTime': 4}, {
+  'title': 'Blockbuster Movie Breaks Box Office Records', 'category': 'Entertainment', 'readTime': 3}, {
+  'title': 'Stock Market Soars to All-Time High', 'category': 'Finance', 'readTime': 8
+} ]}
 ```
-
-Note: Zephyr requires this be on 1 line in real use.
 
 With these cycler values:
 

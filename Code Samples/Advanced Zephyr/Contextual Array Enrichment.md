@@ -12,14 +12,14 @@ This context includes information about the item's position (first, last), as we
 Given this data:
 
 ```handlebars
-{articles = [
-    {'title': 'Breaking News: Global Summit Announced', 'category': 'Politics', 'readTime': 5},
-    {'title': 'New Study Reveals Benefits of Mediterranean Diet', 'category': 'Health', 'readTime': 7},
-    {'title': 'Tech Giant Unveils Revolutionary Smartphone', 'category': 'Technology', 'readTime': 6},
-    {'title': 'Record-Breaking Heatwave Sweeps Across Europe', 'category': 'Environment', 'readTime': 4},
-    {'title': 'Blockbuster Movie Breaks Box Office Records', 'category': 'Entertainment', 'readTime': 3},
-    {'title': 'Stock Market Soars to All-Time High', 'category': 'Finance', 'readTime': 8}
-]}
+{articles_m = [{
+  'title': 'Breaking News: Global Summit Announced', 'category': 'Politics', 'readTime': 5}, {
+  'title': 'New Study Reveals Benefits of Mediterranean Diet', 'category': 'Health', 'readTime': 7}, {
+  'title': 'Tech Giant Unveils Revolutionary Smartphone', 'category': 'Technology', 'readTime': 6}, {
+  'title': 'Record-Breaking Heatwave Sweeps Across Europe', 'category': 'Environment', 'readTime': 4}, {
+  'title': 'Blockbuster Movie Breaks Box Office Records', 'category': 'Entertainment', 'readTime': 3}, {
+  'title': 'Stock Market Soars to All-Time High', 'category': 'Finance', 'readTime': 8
+  } ]}
 ```
 
 Set the base 'myData' variable equal to the existing data. Using this format allows for the next piece to be save to include and used with several pieces of data throughout a template.

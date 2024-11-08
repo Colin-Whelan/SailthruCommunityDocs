@@ -7,5 +7,5 @@
 
 **!! WARNING !!**
 
-There is a hidden property from the UI called 'expire_date' which will prevent some products/articles from being returned unless this property is added: `"allow_expired":true`
-This hidden value shows when the product will expire, but the only way to view the field is after this special parameter is added.
+There is a property in the UI called 'expire_date' which will prevent some products/articles from being returned unless this property is added: `"allow_expired":true`
+This hidden value shows when the product will expire and is very easy to miss. Once missed it's difficult to diagnose.

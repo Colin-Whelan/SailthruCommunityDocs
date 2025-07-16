@@ -47,6 +47,8 @@ This produces both values: `0` and `1`
 | `range(1,2,1)` | `1 2` | `1 2` |
 | `range(0,2,1)` | `0 1 2` | `0 1` |
 
+This shows that in some cases the described behaviour will produce the correct result, but usually will show more/fewer items than described.
+
 ## Impact on the Example
 
 In the personalization example:

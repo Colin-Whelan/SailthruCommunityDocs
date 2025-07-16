@@ -41,13 +41,14 @@ This produces both values: `0` and `1`
 
 ## Examples
 
-| Code | Expected Output | What Documentation Claims |
-|------|----------------|---------------------------|
-| `range(0,1,1)` | `0 1` | `0` only |
-| `range(1,2,1)` | `1 2` | `1 2` |
-| `range(0,2,1)` | `0 1 2` | `0 1` |
+| Code | Expected Output | What Documentation Claims | Notes |
+|------|----------------|---------------------------|---------------------------|
+| `range(0,1,1)` | `0 1` | `0` only | Description claims fewer items |
+| `range(1,2,1)` | `1 2` | `1 2` | Correct by coincidence |
+| `range(0,2,1)` | `0 1 2` | `0 1` | Description claims fewer items |
+| `range(10,2,1)` | `` (empty/error) | `10 11` | Description claims impossible ranges are possible |
 
-This shows that in some cases the described behaviour will produce the correct result, but will usually show more/fewer items than described.
+This shows that in some cases the described behaviour will produce the correct result, but will usually show results differently than expected.
 
 ## Impact on the Example
 

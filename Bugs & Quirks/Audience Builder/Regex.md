@@ -6,35 +6,27 @@ Sailthru's Audience Builder supports regular expressions in the "Email address c
 
 You can write regular expressions directly in the "Email address contains" field to create sophisticated audience segments based on email address patterns. This searches the complete email address including both the local part and domain.
 
-## ⚠️ **CRITICAL LIMITATION: Character Ranges Don't Work**
-
-**Sailthru's regex implementation does NOT support character ranges in square brackets.** This is a major difference from standard regex:
-
-- `[a-z]` does NOT match lowercase letters - it only matches 'a', '-', or 'z'
-- `[0-9]` does NOT match digits - it only matches '0', '-', or '9'  
-- `[A-Z]` does NOT match uppercase letters - it only matches 'A', '-', or 'Z'
-
-**Why this matters:**
-- Patterns like `*[A-Z]*` will match emails with hyphens, not uppercase letters
-- Many standard regex patterns will behave unexpectedly
-- You must write out full character sets: `[abcdefghijklmnopqrstuvwxyz]` instead of `[a-z]`
-
 ## Supported Regex Features
 
-### Character Classes `[]` ⚠️ **IMPORTANT LIMITATION**
+### Character Classes `[]` ⚠️ **CRITICAL LIMITATION**
 
-**Square brackets in Sailthru do NOT support character ranges.** Instead, they work as literal character sets only.
+**Sailthru's regex implementation does NOT support character ranges in square brackets.** This is a major difference from standard regex - instead, they work as literal character sets only.
 
 ```regex
 [abc]     # Matches literal 'a', 'b', or 'c' ✓
 [a-z]     # Does NOT match a-z range ✗ - matches 'a', '-', or 'z' only!
 [0-9]     # Does NOT match digits ✗ - matches '0', '-', or '9' only!
+[A-Z]     # Does NOT match uppercase letters ✗ - matches 'A', '-', or 'Z' only!
 [d-y]     # Matches 'd', '-', or 'y' only
 ```
 
 **This explains unexpected behavior:**
 - `*[A-Z]{1,20}*` matches emails with hyphens because it looks for 'A', '-', or 'Z'
 - `*[d-y]{5,20}*` finds fewer results than `*[e-y]{5,20}*` because 'e' is more common than 'd'
+- Patterns like `*[A-Z]*` will match emails with hyphens, not uppercase letters
+- Many standard regex patterns will behave unexpectedly
+
+**Workaround:** You must write out full character sets: `[abcdefghijklmnopqrstuvwxyz]` instead of `[a-z]` (though this may be impractical for long ranges).
 
 ### Quantifiers `{}`
 Use curly braces to specify exact counts or ranges:

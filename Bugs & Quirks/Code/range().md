@@ -1,4 +1,8 @@
-# Range Function Documentation Error
+# The range() docs have been corrected.
+
+---
+
+# (ARCHIVE) Range Function Documentation Error
 
 ## Problem
 

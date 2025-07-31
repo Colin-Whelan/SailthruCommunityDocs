@@ -1,5 +1,7 @@
 # Sailthru Template Preview Image URL Generation Guide
 
+**File:** `sailthru-template-preview-url-guide.md`
+
 This guide explains how to programmatically generate preview image URLs for Sailthru templates, which can be useful for building custom search interfaces, dashboard widgets, or other integrations.
 
 ## Overview
@@ -47,7 +49,7 @@ if (existingImages.length > 0) {
 
 ### Robust Detection Function
 
-For production use, it's better to check multiple images to ensure accuracy:
+For web-based tools, you can automatically detect the account ID by checking multiple images to ensure accuracy:
 
 ```javascript
 function detectAccountId() {
@@ -79,6 +81,35 @@ function detectAccountId() {
     return null; // No account ID detected
 }
 ```
+
+### When to Use Detection vs. Hardcoding
+
+**Use automatic detection for:**
+- **Browser extensions** and userscripts
+- **Web-based tools** that run within the Sailthru interface
+- **Development and testing** when you're unsure of the account ID
+
+**Use hardcoded values for:**
+- **CLI tools** and server-side applications
+- **Production applications** where performance is critical
+- **Multi-account tools** where you know the account IDs in advance
+
+**Hybrid approach (recommended for production):**
+```javascript
+const CONFIG = {
+    accountId: 'your_known_account_id', // Hardcode for performance
+    autoDetect: false // Set to true for development/unknown accounts
+};
+
+function getAccountId() {
+    if (CONFIG.autoDetect) {
+        return detectAccountId() || CONFIG.accountId; // Fallback to hardcoded
+    }
+    return CONFIG.accountId;
+}
+```
+
+Depending on your use case, using a configuration option that allows both detection and hardcoding may provide the best balance of flexibility and performance.
 
 ## Template Code Generation (Base 36 Conversion)
 

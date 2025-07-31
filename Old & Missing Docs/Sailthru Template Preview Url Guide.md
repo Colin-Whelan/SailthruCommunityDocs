@@ -1,7 +1,5 @@
 # Sailthru Template Preview Image URL Generation Guide
 
-**File:** `sailthru-template-preview-url-guide.md`
-
 This guide explains how to programmatically generate preview image URLs for Sailthru templates, which can be useful for building custom search interfaces, dashboard widgets, or other integrations.
 
 ## Overview

@@ -22,10 +22,8 @@ Where:
 
 ### What is the Account ID?
 
-The account ID is a unique identifier for your Sailthru account. It can be:
-- **Numeric**: `123`, `456`, `789`
-- **Alphanumeric**: `abc`, `7xy`, `test1`
-- **Mixed**: Any combination of letters and numbers
+The account ID is a unique identifier for your Sailthru account. It consists of 3 alpha-numeric characters:
+- `123`, `456`, `789`, `abc`, `7xy`, `ts1`
 
 ### How to Detect Your Account ID
 
